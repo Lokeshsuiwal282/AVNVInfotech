@@ -218,12 +218,12 @@ h6 {
 }
 
 .header .navmenu .mobile-nav-toggle {
-  font-size: 21px;
+  font-size: 19px;
   cursor: pointer;
   display: inline-block;
   color: var(--paragraph);
-  padding: 5px;
-  border-radius: 10px;
+  /* padding: 5px; */
+  border-radius: 5px;
   border: var(--border-1px);
   align-items: center;
   justify-content: center;
@@ -269,11 +269,11 @@ span {
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
-  --background-color: rgba(255, 255, 255, 0.95);
-  /* --background-color: linear-gradient(90deg, #0f0d1d 0%, #3c72fc 100%); */
+  /* --background-color: rgba(255, 255, 255, 0.95); */
+  --background-color:#274eb2;
   --heading-color: #3c3c3c;
-  --nav-color: #3c3c3c;
-  --nav-hover-color: #3c3c3c;
+  --nav-color: #ffffff;
+  --nav-hover-color: #fffbfb;
 }
 .primary-color {
   color: var(--primary-color) !important;
@@ -498,7 +498,7 @@ span {
     /* position: fixed; */
     top: 0;
     right: 0px;
-    width: 400px;
+    width: 370px;
     height: 100%;
     display: none;
     list-style: none;
@@ -511,7 +511,7 @@ span {
     z-index: 9998;
     float: right;
     padding: 15px;
-    padding-top: 20px;
+    padding-top: 15px;
   }
 
   .navmenu ul li {
@@ -1260,7 +1260,7 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
-.services .service-item {
+/* .services .service-item {
   background-color: var(--surface-color);
   padding: 40px;
   box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
@@ -1334,6 +1334,71 @@ section,
 
 .services .service-item:hover .readmore {
   color: var(--accent-color);
+} */
+.services .img {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.services .img img {
+  transition: 0.6s;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.services .details {
+  background: color-mix(in srgb, var(--surface-color), transparent 5%);
+  padding: 50px 30px;
+  margin: -100px 30px 0 30px;
+  transition: all ease-in-out 0.3s;
+  position: relative;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 0 25px rgba(0, 0, 0, 0.1);
+}
+
+.services .details .icon {
+  margin: 0;
+    margin-bottom: 0px;
+  width: 72px;
+  height: 72px;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border: 6px solid var(--contrast-color);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 28px;
+  transition: ease-in-out 0.3s;
+  position: absolute;
+  top: -36px;
+  left: calc(50% - 36px);
+}
+
+.services .details .icon {
+  color: var(--contrast-color);
+  font-size: 28px;
+}
+
+.services .details h3 {
+  font-weight: 700;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+  transition: ease-in-out 0.3s;
+}
+
+.stretched-link::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  content: "";
 }
 
 /*--------------------------------------------------------------
