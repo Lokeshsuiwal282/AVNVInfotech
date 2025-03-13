@@ -1,29 +1,39 @@
-
 /* Fonts */
 :root {
-  --default-font: "Open Sans",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Roboto",  sans-serif;
-  --nav-font: "Poppins",  sans-serif;
+  --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Roboto", sans-serif;
+  --nav-font: "Poppins", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #364d59; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #52565e; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #3c72fc; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #364d59;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #52565e;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #3c72fc;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --watch-color: #fa0a0a;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(255, 255, 255, 0.55);  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #0a0a0a; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #ffffff; 
-  --nav-dropdown-hover-color: #3c72fc; 
+  --nav-color: rgba(255, 255, 255, 0.55);
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #ffffff;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #0a0a0a;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #ffffff;
+  --nav-dropdown-hover-color: #3c72fc;
   --primary-color: #3c72fc;
   --secondary-color: #0f0d1d;
   --gradient-bg: linear-gradient(90deg, #3c72fc -10.59%, #00060c 300.59%);
@@ -132,6 +142,7 @@ h6 {
     transform: rotate(360deg);
   }
 }
+
 /*--------------------------------------------------------------
 # Global Cursor
 --------------------------------------------------------------*/
@@ -149,6 +160,7 @@ h6 {
   -o-transition: all 0.08s ease-out;
   transition: all 0.08s ease-out;
 }
+
 .mouse-cursor {
   position: fixed;
   left: 0;
@@ -159,6 +171,7 @@ h6 {
   transform: translateZ(0);
   visibility: hidden;
 }
+
 .cursor-inner {
   width: 6px;
   height: 6px;
@@ -168,6 +181,7 @@ h6 {
   -o-transition: width 0.3s ease-in-out, height 0.3s ease-in-out, margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out, margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
+
 .mouse-cursor {
   position: fixed;
   left: 0;
@@ -178,6 +192,7 @@ h6 {
   transform: translateZ(0);
   visibility: hidden;
 }
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -191,11 +206,13 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
 }
-.linebar{
+
+.linebar {
   border-bottom: 1.5px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
+
 .header .logo img {
-  max-height:45px;
+  max-height: 45px;
   margin-right: 8px;
 }
 
@@ -229,6 +246,7 @@ h6 {
   justify-content: center;
   display: flex;
 }
+
 .about-three__left-item .about-call-icon {
   width: 56px;
   height: 56px;
@@ -238,6 +256,7 @@ h6 {
   transition: var(--transition);
   border: 1px solid var(--primary-color);
 }
+
 .about-three__left-item .about-call-icon span {
   width: 48px;
   height: 48px;
@@ -247,6 +266,7 @@ h6 {
   transition: var(--transition);
   background: var(--gradient-bg);
 }
+
 span {
   display: inline-block;
   color: var(--span);
@@ -256,25 +276,30 @@ span {
   0% {
     transform: rotate(0deg);
   }
+
   50% {
     transform: rotate(8deg);
   }
+
   100% {
     transform: rotate(12deg);
   }
 }
+
 .about-three__left-item .about-call-icon svg {
-  animation: rotateAnimation  2.5s infinite ease-in-out;
+  animation: rotateAnimation 2.5s infinite ease-in-out;
 }
+
 /* Global Header on Scroll
 ------------------------------*/
 .scrolled .header {
   /* --background-color: rgba(255, 255, 255, 0.95); */
-  --background-color:#274eb2;
+  --background-color: #274eb2;
   --heading-color: #3c3c3c;
   --nav-color: #ffffff;
   --nav-hover-color: #fffbfb;
 }
+
 .primary-color {
   color: var(--primary-color) !important;
 }
@@ -306,10 +331,10 @@ span {
 
 .info .social-icon {
   display: flex;
-  justify-content: center; 
-  align-items: center; 
-  gap: 10px; 
-  flex-wrap: wrap; 
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .info .social-icon a {
@@ -338,9 +363,11 @@ span {
   .navmenu {
     padding: 0;
   }
+
   .navmenu .nav-img {
     display: none;
   }
+
   .navmenu ul {
     margin: 0;
     padding: 0;
@@ -488,12 +515,13 @@ span {
     padding: 0;
     z-index: 9997;
   }
-  
+
   .navmenu img {
     width: 80%;
     height: 55px;
     margin-bottom: 40px;
   }
+
   .navmenu ul {
     /* position: fixed; */
     top: 0;
@@ -517,10 +545,11 @@ span {
   .navmenu ul li {
     border-bottom: 1.5px solid color-mix(in srgb, var(--default-color), transparent 50%);
   }
-  
-  .navmenu .content-info{
+
+  .navmenu .content-info {
     margin-top: 40px;
   }
+
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-dropdown-color);
@@ -616,6 +645,10 @@ span {
 
   .mobile-nav-active .navmenu>ul {
     display: block;
+  }
+  .about__left-item, .about-two__left-item {
+    max-width: 580px;
+    margin: 0 auto;
   }
 }
 
@@ -981,6 +1014,7 @@ section,
     padding: 100px 50px 60px 50px;
   }
 }
+
 .hero .info h1 {
   text-transform: uppercase;
   font-size: 21px;
@@ -990,6 +1024,7 @@ section,
   position: relative;
   /* background-color: rgba(255, 255, 255, 0.1); */
 }
+
 .hero .info h2 {
   margin-bottom: 30px;
   padding-bottom: 30px;
@@ -1023,7 +1058,6 @@ section,
 }
 
 .hero .info .btn-get-started {
-  color: var(--contrast-color);
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 16px;
@@ -1033,11 +1067,24 @@ section,
   border-radius: 50px;
   transition: 0.5s;
   margin: 10px;
+}
+
+.hero .info .hero_explore_btn {
+  color: var(--contrast-color);
   border: 2px solid var(--accent-color);
 }
 
-.hero .info .btn-get-started:hover {
+.hero .info .hero_watch_btn {
+  color: var(--watch-color);
+}
+
+.hero .info .hero_explore_btn:hover {
   background: var(--accent-color);
+}
+
+.hero .info .hero_watch_btn:hover {
+  background: var(--watch-color);
+  color: var(--contrast-color);
 }
 
 .hero .carousel {
@@ -1124,6 +1171,36 @@ section,
 .hero .carousel-control-next:hover {
   opacity: 0.9;
 }
+
+/* Zoom-in & Zoom-out Effect on Images */
+.carousel-img {
+  transition: transform 4s ease-in-out;
+}
+
+.carousel-item.active .carousel-img {
+  transform: scale(1.1);
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 15px;
+}
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.carousel-indicators .active {
+  background-color: blue;
+}
+
 
 /*--------------------------------------------------------------
 # Get Started Section
@@ -1335,14 +1412,39 @@ section,
 .services .service-item:hover .readmore {
   color: var(--accent-color);
 } */
+
+.services .services-itme {
+  cursor: pointer;
+}
 .services .img {
   border-radius: 8px;
   overflow: hidden;
 }
 
+/* Smooth Transition for Image and Icon */
+.service-item .img img,
+.service-item .icon {
+  transition: all 3s ease-in-out;
+}
+
+/* Image Zoom-In Effect on Hover */
+.service-item:hover .img img{
+  transform: scale(1.5);
+}
+
+.service-item:hover h3{
+  color: var(--accent-color);
+}
+
+.service-item:hover .icon {
+  color: var(--accent-color);
+  background-color: var(--contrast-color);
+}
+
 .services .img img {
   transition: 0.6s;
 }
+
 .img-fluid {
   max-width: 100%;
   height: auto;
@@ -1359,9 +1461,9 @@ section,
   box-shadow: 0px 0 25px rgba(0, 0, 0, 0.1);
 }
 
-.services .details .icon {
+.services .details .icon i {
   margin: 0;
-    margin-bottom: 0px;
+  margin-bottom: 0px;
   width: 72px;
   height: 72px;
   background: var(--accent-color);
@@ -1402,24 +1504,79 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Alt Services Section
+# About Section
 --------------------------------------------------------------*/
-.alt-services .features-image {
+
+.about__left-item, .about-two__left-item {
   position: relative;
-  min-height: 400px;
 }
 
-.alt-services .features-image img {
+.about-two__left-item .dots {
   position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  right: 15%;
+  top: 0;
+}
+
+/* Animate Dots */
+.animate-dots {
+  animation: moveDots 2s infinite alternate ease-in-out;
+}
+
+@keyframes moveDots {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-10px); }
+}
+
+.about-two__left-item .shape-halper {
+  position: absolute;
+  top: 26%;
+  right: 17%;
+}
+
+.sway__animation {
+  animation: sway 3s linear infinite alternate;
+}
+.about__left-item .big-image, .about-two__left-item .big-image {
+  max-width: 386px;
+  position: relative;
   z-index: 1;
 }
+.image img {
+  width: 100%;
+}
+.about-two__left-item .sm-image {
+  bottom: 20px;
+}
+.about__left-item .sm-image, .about-two__left-item .sm-image {
+  max-width: 295px;
+  position: absolute;
+  right: 15px;
+  bottom: 7px;
+  z-index: 2;
+}
+.about-two__left-item .circle-shape {
+  right: unset;
+  left: -32%;
+  top: 12%;
+  animation: rotate 5s linear infinite;
+}
+.about__left-item .circle-shape, .about-two__left-item .circle-shape {
+  position: absolute;
+  top: 30px;
+  right: 80px;
+}
 
-.alt-services h3 {
+/* Continuous 360° Rotation */
+.animation__rotate {
+  animation: rotate360 3s linear infinite;
+}
+
+@keyframes rotate360 {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.about h3 {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -1427,7 +1584,7 @@ section,
   position: relative;
 }
 
-.alt-services h3:after {
+.about h3:after {
   content: "";
   background: var(--accent-color);
   position: absolute;
@@ -1438,47 +1595,47 @@ section,
   bottom: 0;
 }
 
-.alt-services .icon-box {
+.about .icon-box {
   margin-top: 50px;
 }
 
-.alt-services .icon-box i {
+.about .icon-box i {
   color: var(--accent-color);
   background-color: var(--surface-color);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 25px;
-  font-size: 28px;
-  width: 56px;
-  height: 56px;
+  font-size: 24px;
+  width: 45px;
+  height: 45px;
   border-radius: 4px;
   line-height: 0;
   box-shadow: 0px 2px 30px rgba(0, 0, 0, 0.1);
   transition: 0.3s;
 }
 
-.alt-services .icon-box:hover i {
+.about .icon-box:hover i {
   background-color: var(--accent-color);
   color: var(--contrast-color);
 }
 
-.alt-services .icon-box h4 {
+.about .icon-box h4 {
   font-weight: 700;
   margin-bottom: 10px;
   font-size: 18px;
 }
 
-.alt-services .icon-box h4 a {
+.about .icon-box h4 a {
   color: var(--heading-color);
   transition: 0.3s;
 }
 
-.alt-services .icon-box h4 a:hover {
+.about .icon-box h4 a:hover {
   color: var(--accent-color);
 }
 
-.alt-services .icon-box p {
+.about .icon-box p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
@@ -1881,110 +2038,6 @@ section,
 
 .recent-blog-posts .post-item:hover .post-img img {
   transform: scale(1.1);
-}
-
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
-.about .inner-title {
-  font-size: 2.75rem;
-  font-weight: 700;
-  margin: 30px 0;
-}
-
-@media (min-width: 991px) {
-  .about .inner-title {
-    max-width: 65%;
-    margin: 0 0 80px 0;
-  }
-}
-
-.about .our-story {
-  padding: 40px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 96%);
-}
-
-@media (min-width: 991px) {
-  .about .our-story {
-    padding-right: 35%;
-  }
-}
-
-.about .our-story h4 {
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-}
-
-.about .our-story h3 {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-}
-
-.about .our-story p:last-child {
-  margin-bottom: 0;
-}
-
-.about ul {
-  list-style: none;
-  padding: 0;
-  font-size: 15px;
-}
-
-.about ul li {
-  padding: 5px 0;
-  display: flex;
-  align-items: center;
-}
-
-.about ul i {
-  font-size: 1.25rem;
-  margin-right: 0.5rem;
-  line-height: 1.2;
-  color: var(--accent-color);
-}
-
-.about .watch-video i {
-  font-size: 2rem;
-  transition: 0.3s;
-  color: var(--accent-color);
-}
-
-.about .watch-video a {
-  font-weight: 600;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin-left: 8px;
-  transition: 0.3s;
-}
-
-.about .watch-video:hover a {
-  color: var(--accent-color);
-}
-
-.about .about-img {
-  min-height: 400px;
-  position: relative;
-}
-
-@media (min-width: 992px) {
-  .about .about-img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-height: 600px;
-  }
-}
-
-.about .about-img img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 1;
 }
 
 /*--------------------------------------------------------------
