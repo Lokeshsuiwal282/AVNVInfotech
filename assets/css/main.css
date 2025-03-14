@@ -295,7 +295,7 @@ span {
 .scrolled .header {
   /* --background-color: rgba(255, 255, 255, 0.95); */
   --background-color: #274eb2;
-  --heading-color: #3c3c3c;
+  /* --heading-color: #3c3c3c; */
   --nav-color: #ffffff;
   --nav-hover-color: #fffbfb;
 }
