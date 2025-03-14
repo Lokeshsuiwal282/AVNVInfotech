@@ -1050,6 +1050,9 @@ section,
   .hero .info h2 {
     font-size: 36px;
   }
+  .hero .info h2:after {
+    width: 120px;
+  }
 }
 
 .hero .info p {
