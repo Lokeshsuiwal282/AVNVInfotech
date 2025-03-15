@@ -7,7 +7,7 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-  --background-color: #ffffff;
+  /* --background-color: #ffffff; */
   /* Background color for the entire website, including individual sections */
   --default-color: #364d59;
   /* Default color used for the majority of the text content across the entire website */
@@ -49,7 +49,7 @@
 }
 
 .dark-background {
-  --background-color: #274eb2;
+  /* --background-color: #274eb2; */
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #252525;
@@ -212,8 +212,9 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 45px;
+  max-height: 55px;
   margin-right: 8px;
+  animation: rotate360 80s linear infinite;
 }
 
 .header .logo h1 {
@@ -364,7 +365,7 @@ span {
     padding: 0;
   }
 
-  .navmenu .nav-img {
+  .navmenu  h1 {
     display: none;
   }
 
@@ -517,9 +518,13 @@ span {
   }
 
   .navmenu img {
-    width: 80%;
+    width: 55px;
     height: 55px;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
+  }
+
+  .navmenu h1 {
+    font-size: 28px;
   }
 
   .navmenu ul {
@@ -937,7 +942,7 @@ span {
 section,
 .section {
   color: var(--default-color);
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
   padding: 60px 0;
   scroll-margin-top: 92px;
   overflow: clip;
@@ -1008,12 +1013,12 @@ section,
   padding: 140px 0 60px 0;
 }
 
-@media (max-width: 768px),
+/* @media (max-width: 768px),
 (max-height: 480px) {
   .hero .info {
     padding: 100px 50px 60px 50px;
   }
-}
+} */
 
 .hero .info h1 {
   text-transform: uppercase;
@@ -1022,13 +1027,13 @@ section,
   font-weight: 600;
   letter-spacing: 1px;
   position: relative;
-  /* background-color: rgba(255, 255, 255, 0.1); */
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .hero .info h2 {
   margin-bottom: 30px;
   padding-bottom: 30px;
-  font-size: 60px;
+  font-size: 50px;
   font-weight: 700;
   position: relative;
 }
@@ -1112,8 +1117,10 @@ section,
   display: block;
   width: 100%;
   height: 100%;
-  /* object-fit: cover; */
+  object-fit: cover;
   z-index: 1;
+  /* -webkit-filter: grayscale(10%);
+  filter: grayscale(80%); */
 }
 
 .hero .carousel-item::before {
@@ -1509,7 +1516,9 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-
+.about {
+  margin-top: 40px;
+}
 .about__left-item, .about-two__left-item {
   position: relative;
 }
