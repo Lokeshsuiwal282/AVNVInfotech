@@ -39,6 +39,7 @@
   --gradient-bg: linear-gradient(90deg, #3c72fc -10.59%, #00060c 300.59%);
   --border-1px: 1px solid #eaecf0;
   --border-2px: 2px solid #eaecf0;
+  --white: #ffffff;
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -214,7 +215,7 @@ h6 {
 .header .logo img {
   max-height: 55px;
   margin-right: 8px;
-  animation: rotate360 80s linear infinite;
+  /* animation: rotate360 80s linear infinite; */
 }
 
 .header .logo h1 {
@@ -295,7 +296,7 @@ span {
 ------------------------------*/
 .scrolled .header {
   /* --background-color: rgba(255, 255, 255, 0.95); */
-  --background-color: #274eb2;
+  --background-color: #160b65;
   /* --heading-color: #3c3c3c; */
   --nav-color: #ffffff;
   --nav-hover-color: #fffbfb;
@@ -662,7 +663,7 @@ span {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: #274eb2;
+  background-color: #160b65;
   /* background: url("../img/footer-bg.jpg") top center no-repeat; */
   background-size: cover;
   font-size: 14px;
@@ -1082,15 +1083,16 @@ section,
   border: 2px solid var(--accent-color);
 }
 
-.hero .info .hero_watch_btn {
+/* .hero .info .hero_watch_btn {
   color: var(--watch-color);
-}
+  background: var(--watch-color);
+} */
 
 .hero .info .hero_explore_btn:hover {
   background: var(--accent-color);
 }
 
-.hero .info .hero_watch_btn:hover {
+.hero .info .hero_watch_btn {
   background: var(--watch-color);
   color: var(--contrast-color);
 }
@@ -1347,81 +1349,6 @@ section,
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
-/* .services .service-item {
-  background-color: var(--surface-color);
-  padding: 40px;
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1);
-  height: 100%;
-}
-
-.services .service-item .icon {
-  width: 48px;
-  height: 48px;
-  position: relative;
-  margin-bottom: 50px;
-}
-
-.services .service-item .icon i {
-  color: var(--heading-color);
-  font-size: 56px;
-  transition: ease-in-out 0.3s;
-  z-index: 2;
-  position: relative;
-}
-
-.services .service-item .icon:before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  background: color-mix(in srgb, var(--heading-color), transparent 95%);
-  border-radius: 50px;
-  z-index: 1;
-  top: 10px;
-  right: -20px;
-  transition: 0.3s;
-}
-
-.services .service-item h3 {
-  color: color-mix(in srgb, var(--heading-color), transparent 20%);
-  font-weight: 700;
-  margin: 0 0 20px 0;
-  padding-bottom: 8px;
-  font-size: 22px;
-  position: relative;
-  display: inline-block;
-  border-bottom: 4px solid color-mix(in srgb, var(--heading-color), transparent 90%);
-  transition: 0.3s;
-}
-
-.services .service-item p {
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.services .service-item .readmore {
-  margin-top: 15px;
-  display: inline-block;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-.services .service-item:hover .icon i {
-  color: var(--heading-color);
-}
-
-.services .service-item:hover .icon:before {
-  background: var(--accent-color);
-}
-
-.services .service-item:hover h3 {
-  border-color: var(--accent-color);
-  color: var(--heading-color);
-}
-
-.services .service-item:hover .readmore {
-  color: var(--accent-color);
-} */
 
 .services .services-itme {
   cursor: pointer;
@@ -1511,6 +1438,81 @@ section,
   left: 0;
   z-index: 1;
   content: "";
+}
+
+.service-button {
+  text-align: center;
+  margin-top: 40px;
+}
+.btn-one {
+  padding: 15px 25px;
+  background: var(--gradient-bg);
+  font-weight: 600;
+  color: var(--white);
+  transition: var(--transition);
+  text-transform: capitalize;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn-one i {
+  margin-left: 8px;
+  transition: var(--transition);
+}
+
+@media (max-width: 575px) {
+  .btn-one i {
+      margin-left: 3px;
+      font-size: 12px;
+  }
+}
+
+@media (max-width: 575px) {
+  .btn-one {
+      padding: 8px 18px;
+      font-size: 14px;
+  }
+}
+
+.btn-one::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 0;
+  content: "";
+  background-color: var(--secondary-color);
+  z-index: -1;
+  transition: var(--transition);
+}
+
+.btn-one::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 0;
+  content: "";
+  background-color: var(--secondary-color);
+  z-index: -1;
+  transition: var(--transition);
+}
+
+.btn-one:hover {
+  color: var(--white);
+}
+
+.btn-one:hover::before {
+  height: 100%;
+}
+
+.btn-one:hover::after {
+  height: 100%;
+}
+
+.btn-one:hover i {
+  transform: translate(5px);
 }
 
 /*--------------------------------------------------------------
