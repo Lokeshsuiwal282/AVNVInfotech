@@ -7,7 +7,7 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-  /* --background-color: #ffffff; */
+  --background-color: #ffffff;
   /* Background color for the entire website, including individual sections */
   --default-color: #364d59;
   /* Default color used for the majority of the text content across the entire website */
@@ -50,7 +50,7 @@
 }
 
 .dark-background {
-  /* --background-color: #274eb2; */
+  --background-color: #274eb2;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #252525;
