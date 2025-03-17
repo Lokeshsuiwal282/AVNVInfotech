@@ -76,6 +76,8 @@ a {
   color: var(--accent-color);
   text-decoration: none;
   transition: 0.3s;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
 }
 
 a:hover {
@@ -224,6 +226,8 @@ h6 {
   margin: 0;
   font-weight: 700;
   color: var(--heading-color);
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
 }
 
 .header .logo span {
@@ -688,11 +692,11 @@ span {
 
 .footer .footer-about .logo {
   line-height: 1;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .footer .footer-about .logo img {
-  max-height: 40px;
+  max-height: 55px;
   margin-right: 6px;
 }
 
@@ -705,7 +709,7 @@ span {
 }
 
 .footer .footer-about p {
-  font-size: 14px;
+  font-size: 15px;
   font-family: var(--heading-font);
 }
 
@@ -729,7 +733,7 @@ span {
 }
 
 .footer h4 {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
@@ -745,9 +749,20 @@ span {
   margin: 0;
 }
 
+.footer .link-animated a {
+  transition: .7s;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer .link-animated a:hover {
+  padding-left: 12px;
+}
+
+
 .footer .footer-links ul i {
   padding-right: 2px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 0;
 }
 
@@ -787,7 +802,10 @@ span {
 
 .footer .credits {
   margin-top: 8px;
-  font-size: 13px;
+  font-size: 14px;
+}
+.footer .credits a:hover {
+  color: var(--contrast-color);
 }
 
 /*--------------------------------------------------------------
@@ -894,7 +912,7 @@ span {
 --------------------------------------------------------------*/
 .page-title {
   color: var(--default-color);
-  /* background-color: var(--background-color); */
+  background-color: var(--secondary-color);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -914,6 +932,8 @@ span {
   font-size: 56px;
   font-weight: 500;
   margin-bottom: 10px;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
 }
 
 .page-title .breadcrumbs ol {
@@ -932,7 +952,7 @@ span {
 }
 
 .page-title .breadcrumbs ol li+li::before {
-  content: "/";
+  content: ">>";
   display: inline-block;
   padding-right: 10px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
@@ -1030,6 +1050,8 @@ section,
   letter-spacing: 1px;
   position: relative;
   background: rgba(255, 255, 255, 0.1);
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
 }
 
 .hero .info h2 {
@@ -1038,6 +1060,8 @@ section,
   font-size: 50px;
   font-weight: 700;
   position: relative;
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
 }
 
 .hero .info h2:after {
@@ -1672,6 +1696,94 @@ section,
 }
 
 /*--------------------------------------------------------------
+# About 2 Section
+--------------------------------------------------------------*/
+.about-2 .about-img {
+  position: relative;
+  margin: 60px 0 0 60px;
+}
+
+.about-2 .about-img:before {
+  position: absolute;
+  inset: -60px 0 0 -60px;
+  content: "";
+  background: url("../img/about-bg.png") top left;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.about-2 .about-img img {
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 575px) {
+  .about-2 .about-img {
+    margin: 30px 0 0 30px;
+  }
+
+  .about-2 .about-img:before {
+    inset: -30px 0 0 -30px;
+  }
+}
+
+.about-2 h3 {
+  font-weight: 300;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .about-2 h3 {
+    font-size: 28px;
+  }
+}
+
+.about-2 .nav-pills {
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+}
+
+.about-2 .nav-pills li+li {
+  margin-left: 40px;
+}
+
+.about-2 .nav-link {
+  background: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--default-color);
+  padding: 12px 0;
+  margin-bottom: -2px;
+  border-radius: 0;
+}
+
+.about-2 .nav-link.active {
+  color: var(--accent-color);
+  background: none;
+  border-bottom: 3px solid var(--accent-color);
+}
+
+@media (max-width: 575px) {
+  .about-2 .nav-link {
+    font-size: 16px;
+  }
+}
+
+.about-2 .tab-content h4 {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--default-color);
+}
+
+.about-2 .tab-content i {
+  font-size: 22px;
+  line-height: 0;
+  margin-right: 8px;
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
 .features .nav-tabs {
@@ -2136,6 +2248,53 @@ section,
   margin-top: 5px;
 }
 
+/* .about__item {
+  position: relative;
+  overflow: hidden;
+} */
+
+.about__item .shape-top {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.about__item .shape-bottom {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+.about__item:hover .shape-top {
+  top: 0%;
+  right: 0%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.about__item:hover .shape-bottom {
+  bottom: 0%;
+  left: 0%;
+  opacity: 1;
+  visibility: visible;
+}
+
+.about__icon {
+  transition: transform 1s ease-in-out;
+}
+
+.about__item:hover .about__icon {
+  transform: rotateY(360deg);
+  background: var(--accent-color);
+}
+
+
 .stats-counter .stats-item {
   /* box-shadow: 0px 0 30px rgba(0, 0, 0, 0.1); */
   padding: 30px;
@@ -2161,6 +2320,7 @@ section,
   font-family: var(--heading-font);
   font-size: 16px;
 }
+
 
 /*--------------------------------------------------------------
 # Alt Services 2 Section
@@ -2210,7 +2370,136 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Team Section
+# Team Section 1
+--------------------------------------------------------------*/
+.team .team-member {
+  background-color: var(--surface-color);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border-radius: 5px;
+  transition: 0.5s;
+  padding: 30px;
+  height: 100%;
+}
+
+@media (max-width: 468px) {
+  .team .team-member {
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
+
+.team .team-member .pic {
+  overflow: hidden;
+  width: 150px;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.team .team-member .pic img {
+  transition: ease-in-out 0.3s;
+}
+
+.team .team-member:hover {
+  transform: translateY(-10px);
+}
+
+.team .team-member .member-info {
+  padding-left: 30px;
+}
+
+@media (max-width: 468px) {
+  .team .team-member .member-info {
+    padding: 30px 0 0 0;
+    text-align: center;
+  }
+}
+
+.team .team-member h4 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.team .team-member span {
+  display: block;
+  font-size: 15px;
+  padding-bottom: 10px;
+  position: relative;
+  font-weight: 500;
+}
+
+.team .team-member span::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+@media (max-width: 468px) {
+  .team .team-member span::after {
+    left: calc(50% - 25px);
+  }
+}
+
+.team .team-member p {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+}
+
+.team .team-member .social {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+@media (max-width: 468px) {
+  .team .team-member .social {
+    justify-content: center;
+  }
+}
+
+.team .team-member .social a {
+  background: color-mix(in srgb, var(--default-color), transparent 94%);
+  transition: ease-in-out 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  width: 36px;
+  height: 36px;
+}
+
+.team .team-member .social a i {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  font-size: 16px;
+  margin: 0 2px;
+}
+
+.team .team-member .social a:hover {
+  background: var(--accent-color);
+}
+
+.team .team-member .social a:hover i {
+  color: var(--contrast-color);
+}
+
+.team .team-member .social a+a {
+  margin-left: 8px;
+}
+
+
+/*--------------------------------------------------------------
+# Team Section 2
 --------------------------------------------------------------*/
 .team .member {
   position: relative;
@@ -3094,13 +3383,6 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
 }
 
 /*--------------------------------------------------------------
