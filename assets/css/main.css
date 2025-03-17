@@ -1707,7 +1707,7 @@ section,
   position: absolute;
   inset: -60px 0 0 -60px;
   content: "";
-  background: url("../img/about-bg.png") top left;
+  /* background: url("../img/about-bg.png") top left; */
   background-repeat: no-repeat;
   z-index: 1;
 }
@@ -2580,28 +2580,162 @@ section,
 /*--------------------------------------------------------------
 # Features Cards Section
 --------------------------------------------------------------*/
-.features-cards h3 {
-  font-size: 20px;
-  font-weight: 700;
+.secondary-bg {
+  background-color: var(--secondary-color);
 }
 
-.features-cards p {
-  font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+.offer-area {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.features-cards ul li {
+.offer__shadow {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.offer__shape-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0.3;
+}
+
+.offer__shape-right {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  opacity: 0.3;
+}
+
+.offer__icon {
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  border-radius: 50%;
+  transition: var(--transition);
+  margin: 0 auto;
+  background: linear-gradient(180deg, #3c72fc -210.71%, #00060c 100%);
+  margin-top: -35px;
+  transition: 1s;
+}
+
+.offer__item {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  padding-top: 0;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  .offer__item {
+      margin-top: 30px;
+  }
+}
+
+.offer__item .shape-top {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.offer__item .shape-bottom {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+
+.offer__item:hover .shape-top {
+  top: -1px;
+  right: -1px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.offer__item:hover .shape-bottom {
+  position: absolute;
+  bottom: -1px;
+  left: -1px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.offer__item:hover .offer__icon {
+  background: var(--gradient-bg);
+  transform: rotateY(360deg);
+}
+
+.offer__item:hover .offer__icon svg path {
+  fill: #fff;
+}
+
+.counter-area {
+  position: relative;
+}
+
+.counter__shape {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.gradient-bg {
+  background: var(--gradient-bg) !important;
+}
+
+.counter__wrp,
+.quote__wrp {
+  overflow: hidden;
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  margin-top: 50px;
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+
+  .counter__wrp,
+  .quote__wrp {
+      justify-content: center;
+  }
+}
+
+.counter__item {
   display: flex;
   align-items: center;
-  font-size: 14px;
-  padding-top: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  gap: 20px;
+  position: relative;
 }
 
-.features-cards ul li i {
-  font-size: 16px;
-  color: var(--accent-color);
-  margin-right: 6px;
+.counter__item h3 {
+  font-size: 36px;
+  color: var(--white);
+  font-weight: 700;
+  line-height: 50px;
+}
+
+.counter__item h3 span {
+  color: var(--white);
 }
 
 /*--------------------------------------------------------------
@@ -3296,6 +3430,76 @@ section,
 .comment-form form .btn-primary:hover {
   color: var(--contrast-color);
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+/*--------------------------------------------------------------
+# FAQ Section
+--------------------------------------------------------------*/
+
+.accordion .accordion-item {
+  border: var(--border-1px);
+  border-radius: 0px;
+  margin-bottom: 10px;
+}
+
+.accordion .accordion-item.dark-mode {
+  background-color: var(--secondary-color);
+}
+
+.accordion .accordion-item h2 button {
+  font-size: 15px;
+  line-height: 28px;
+  font-weight: 700;
+  box-shadow: none;
+  border-radius: 0 !important;
+  padding: 20px 30px;
+}
+
+.accordion .accordion-item .accordion-body {
+  padding: 20px 30px;
+  padding-top: 0;
+}
+
+.accordion .accordion-item .accordion-body p {
+  color: var(--paragraph);
+}
+
+.accordion .accordion-button {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.accordion .accordion-button::after {
+  display: none;
+}
+
+.accordion .accordion-button::before {
+  position: absolute;
+  content: "\f068";
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 700;
+  top: 20px;
+  right: 25px;
+  font-size: 15px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 0px;
+  color: var(--white);
+  background-color: var(--primary-color);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.accordion .accordion-button.collapsed {
+  background-color: transparent;
+  color: var(--heading-color);
+}
+
+.accordion .accordion-button.collapsed::before {
+  content: "+";
+  background-color: var(--sub-bg);
+  color: var(--primary-color);
 }
 
 /*--------------------------------------------------------------
