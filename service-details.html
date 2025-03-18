@@ -32,20 +32,11 @@
 
   <!-- Add CSS for styling -->
 <style>
-  .services-list a {
-    display: block;
-    padding: 10px 15px;
-    color: #333;
-    text-decoration: none;
-    border-left: 3px solid transparent;
-    transition: all 0.3s ease;
-  }
 
   .services-list a:hover,
   .services-list a.active {
-    color: #007bff; /* Blue color for active link */
+    color: #007bff;
     font-weight: 600;
-    border-color: #007bff;
   }
 
   .service-content {
@@ -95,7 +86,7 @@
           <div class="nav-info content-info mb-3">
             <div class="info">
               <i class="fa-solid primary-color fa-phone-volume"></i>
-              <h5 class="text-white">+91 9874563210</h5>
+              <h6 class="text-white">+91 9874563210</h6>
             </div>
           </div>
           <div class="nav-info mb-3">
@@ -192,7 +183,7 @@
             <div class="services-list">
               <a href="#" class="service-link active" data-target="web-mobile">Web & Mobile Development</a>
               <a href="#" class="service-link" data-target="software-dev">Software Development</a>
-              <a href="#" class="service-link" data-target="graphic-dev">Graphic Design & Video Solutions</a>
+              <a href="#" class="service-link" data-target="graphic-video-dev">Graphic Design & Video Solutions</a>
               <a href="#" class="service-link" data-target="Website-dev">Website Design & Development</a>
               <a href="#" class="service-link" data-target="E-Commerce-dev">E-Commerce Solutions</a>
               <a href="#" class="service-link" data-target="Digital-dev">Digital Marketing (SEO, SEM, SMM)</a>
@@ -201,11 +192,19 @@
               <a href="#" class="service-link" data-target="IT-Consulting-dev">IT Consulting</a>
             </div>
 
-            <h4 class="text-primary">Empowering businesses with scalable, future-ready IT solutions.</h4>
+            <h4 class="text-primary">We can Develop Software for your Business</h4>
             <p>AVNV Infotech is a dynamic IT solutions company based in Jaipur, India. We help businesses grow and
               thrive with intuitive, scalable, and result-driven technology solutions. Whether you’re a startup or an
               enterprise, our team ensures your digital success.</p>
+
+            <div  class="services-list">
+             
+          
+            </div>
+
           </div>
+
+          
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
 
@@ -236,6 +235,32 @@
                 From landing pages to complex portals, we deliver it all.
                 Boost your online presence with our custom web solutions.
               </p>
+            </div>
+
+            <!-- Software Development -->
+            <div id="software-dev" class="service-content">
+              <img src="assets/img/services.jpg" alt="Software Development" class="img-fluid services-img mb-4">
+              <h3 class="text-primary">We offer custom software development services that help businesses automate processes, improve efficiency, and overcome complex challenges.</h3>
+              <p>We offer custom software development services to automate processes, improve efficiency, and solve complex business challenges. From concept to deployment, our solutions are designed to be scalable, secure, and easy to use. Whether it's ERP systems, CRM platforms, or specialized tools, we build software that empowers your business.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Tailor-made software solutions for your unique needs.</li>
+                <li><i class="bi bi-check-circle"></i> Scalable and secure architecture for future growth.</li>
+                <li><i class="bi bi-check-circle"></i> End-to-end development: planning, design, coding, and deployment.</li>
+              </ul>
+              <p>Whether it's ERP systems, CRM platforms, or specialized applications, our solutions are designed to streamline operations and drive business success.</p>
+            </div>
+
+            <!-- Graphic Design & Video Solutions -->
+            <div id="graphic-video-dev" class="service-content">
+              <img src="assets/img/services.jpg" alt="Graphic Design & Video Solutions" class="img-fluid services-img mb-4">
+              <h3 class="text-primary">We craft compelling graphic designs and engaging videos that enhance your brand’s visual identity and deliver your message effectively.</h3>
+              <p>Enhance your brand’s identity with our creative graphic design and video production services. We create stunning visuals, engaging marketing videos, and dynamic animations that capture attention and communicate your message effectively. From logos and brochures to explainer videos and social media content, we help your brand stand out.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> Creative logos, brochures, banners, and marketing materials.</li>
+                <li><i class="bi bi-check-circle"></i> Promotional videos, explainer videos, and animations.</li>
+                <li><i class="bi bi-check-circle"></i> Designs and visuals tailored for social media and web platforms.</li>
+              </ul>
+              <p>From concept to production, we bring your ideas to life through impactful visuals and professional-grade videos that resonate with your target audience.</p>
             </div>
 
           </div>
@@ -365,29 +390,29 @@
   <script src="assets/js/main.js"></script>
 
   <!-- Add JavaScript for switching between services -->
-<script>
-  const serviceLinks = document.querySelectorAll('.service-link');
-  const serviceContents = document.querySelectorAll('.service-content');
+  <script>
+    const serviceLinks = document.querySelectorAll('.service-link');
+    const serviceContents = document.querySelectorAll('.service-content');
 
-  serviceLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
+    serviceLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
 
-      // Remove active class from all links
-      serviceLinks.forEach(link => link.classList.remove('active'));
+        // Remove active class from all links
+        serviceLinks.forEach(link => link.classList.remove('active'));
 
-      // Add active class to the clicked link
-      link.classList.add('active');
+        // Add active class to the clicked link
+        link.classList.add('active');
 
-      // Hide all service contents
-      serviceContents.forEach(content => content.classList.remove('active'));
+        // Hide all service contents
+        serviceContents.forEach(content => content.classList.remove('active'));
 
-      // Show the targeted service content
-      const target = link.getAttribute('data-target');
-      document.getElementById(target).classList.add('active');
+        // Show the targeted service content
+        const target = link.getAttribute('data-target');
+        document.getElementById(target).classList.add('active');
+      });
     });
-  });
-</script>
+  </script>
 
 </body>
 

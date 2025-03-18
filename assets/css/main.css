@@ -2785,9 +2785,10 @@ section,
 }
 
 .service-details .services-list a.active {
-  color: var(--heading-color);
-  font-weight: 700;
+  color: var(--accent-color);
+  font-weight: 800;
   border-color: var(--accent-color);
+  font-size: 17px;
 }
 
 .service-details .services-list a:hover {
@@ -2796,6 +2797,12 @@ section,
 
 .service-details .services-img {
   margin-bottom: 20px;
+}
+
+.service-details img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .service-details h3 {
