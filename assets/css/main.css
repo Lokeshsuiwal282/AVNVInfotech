@@ -2781,14 +2781,16 @@ section,
   border-left: 3px solid color-mix(in srgb, var(--default-color), transparent 70%);
   margin: 20px 0;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
-  transition: 0.3s;
+  transition: 0.5s;
+  font-size: 19px;
+
 }
 
 .service-details .services-list a.active {
   color: var(--accent-color);
   font-weight: 800;
   border-color: var(--accent-color);
-  font-size: 17px;
+  font-size: 21px;
 }
 
 .service-details .services-list a:hover {

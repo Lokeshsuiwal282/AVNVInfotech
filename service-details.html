@@ -31,22 +31,21 @@
   <link href="assets/css/main.css" rel="stylesheet">
 
   <!-- Add CSS for styling -->
-<style>
+  <style>
+    .services-list a:hover,
+    .services-list a.active {
+      color: #007bff;
+      font-weight: 600;
+    }
 
-  .services-list a:hover,
-  .services-list a.active {
-    color: #007bff;
-    font-weight: 600;
-  }
+    .service-content {
+      display: none;
+    }
 
-  .service-content {
-    display: none;
-  }
-
-  .service-content.active {
-    display: block;
-  }
-</style>
+    .service-content.active {
+      display: block;
+    }
+  </style>
 
 </head>
 
@@ -196,21 +195,16 @@
             <p>AVNV Infotech is a dynamic IT solutions company based in Jaipur, India. We help businesses grow and
               thrive with intuitive, scalable, and result-driven technology solutions. Whether you’re a startup or an
               enterprise, our team ensures your digital success.</p>
-
-            <div  class="services-list">
-             
-          
-            </div>
-
           </div>
-
-          
 
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
 
             <!-- Web & Mobile Development -->
             <div id="web-mobile" class="service-content active">
-              <img src="assets\img\html-css-collage-concept-with-person_23-2150062008.avif" alt="Web & Mobile Development" class="img-fluid services-img mb-4">
+              <div class="image faq-image">
+                <img src="assets\img\service\web-mobile-develoment-img.avif" alt="Web & Mobile Development"
+                  class="img-fluid services-img mb-4">
+              </div>
               <h3 class="text-primary">We design and develop responsive, user-friendly websites and mobile applications
                 tailored to your business needs.</h3>
               <p>
@@ -229,38 +223,257 @@
                 From concept to launch, we ensure your digital presence is modern, fast, and engaging to help you
                 connect with a wider audience and achieve your business goals.
               </p>
-              <p>
+              <p class="mb-5">
                 We create responsive, user-friendly websites tailored to your business needs.
                 Our designs are visually appealing and optimized for performance.
                 From landing pages to complex portals, we deliver it all.
                 Boost your online presence with our custom web solutions.
               </p>
+
+              <h3 class="text-primary">We can Develop Website for your Business</h3>
+
+              <h4 class="text-black">WordPress Development</h4>
+              <p>WordPress is a CMS which has easy to use architecture, security, themes and flexible customization. We
+                have 5+ years of experience in developing WordPress Based Customized website for businesses</p>
+
+              <h4 class="text-black">Magento Development</h4>
+              <p>Magento is a feature-rich, professional, and open-source eCommerce solution that offers online
+                merchants complete flexibility and control over the UI, content, and functionality of their online
+                store.</p>
+
+              <h4 class="text-black">E-Commerce Development</h4>
+              <p>We design and develop responsive eCommerce websites that are customer-friendly and drive more sales.
+              </p>
+
+              <h4 class="text-black">CodeIgniter Development</h4>
+              <p>CodeIgniter is a PHP-based framework used to develop secure and dynamic web applications.</p>
+
+              <h4 class="text-black">Laravel Development</h4>
+              <p>Laravel is a PHP framework built with a focus on writing clean and simple code syntax. Web applications
+                developed in Laravel are robust, fast, secure, and user-friendly.</p>
+
+              <h4 class="text-black">Cake PHP Development</h4>
+              <p>CakePHP is a well-known web development framework used to build powerful and fast web applications.</p>
+
+              <h4 class="text-black">Node JS Development</h4>
+              <p>Node JS allows the development of high-performance applications. With features such as easy
+                modification and maintenance, Node JS is a preferred technology for web development.</p>
+
+              <h3 class="text-primary mb-3">Most Comment Question?</h3>
+
+              <div class="accordion" id="faqAccordion faq__item">
+
+                <!-- Question 1 -->
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faq1">
+                      Where should I incorporate my business?
+                    </button>
+                  </h2>
+                  <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      The best place to incorporate your business depends on factors like taxation, legal regulations,
+                      and operational convenience. Common choices include your home country, Delaware (USA) for
+                      business-friendly laws, and offshore jurisdictions like Singapore.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faq2">
+                      What happens to my free trial?
+                    </button>
+                  </h2>
+                  <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      If you do not subscribe after the free trial, your access may be restricted or canceled. If you
+                      subscribe, you can continue using the service without interruption. Some services retain your data
+                      for a limited time, allowing you to reactivate later.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faq3">
+                      What is included in your services?
+                    </button>
+                  </h2>
+                  <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      Our services include website development, e-commerce solutions, SEO & digital marketing, and web
+                      hosting & maintenance. For a detailed list, visit our services page or contact us.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faq4">
+                      What type of company is measured?
+                    </button>
+                  </h2>
+                  <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      Companies are measured by revenue, industry, market value, and employee size. Small, medium, and
+                      large enterprises are categorized based on these factors.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
             </div>
 
             <!-- Software Development -->
             <div id="software-dev" class="service-content">
-              <img src="assets/img/services.jpg" alt="Software Development" class="img-fluid services-img mb-4">
-              <h3 class="text-primary">We offer custom software development services that help businesses automate processes, improve efficiency, and overcome complex challenges.</h3>
-              <p>We offer custom software development services to automate processes, improve efficiency, and solve complex business challenges. From concept to deployment, our solutions are designed to be scalable, secure, and easy to use. Whether it's ERP systems, CRM platforms, or specialized tools, we build software that empowers your business.</p>
+              <img src="assets\img\service\software-develoment-image.avif" alt="Software Development"
+                class="img-fluid services-img mb-4">
+              <h3 class="text-primary">We offer custom software development services that help businesses automate
+                processes, improve efficiency, and overcome complex challenges.</h3>
+              <p>We offer custom software development services to automate processes, improve efficiency, and solve
+                complex business challenges. From concept to deployment, our solutions are designed to be scalable,
+                secure, and easy to use. Whether it's ERP systems, CRM platforms, or specialized tools, we build
+                software that empowers your business.</p>
               <ul>
                 <li><i class="bi bi-check-circle"></i> Tailor-made software solutions for your unique needs.</li>
                 <li><i class="bi bi-check-circle"></i> Scalable and secure architecture for future growth.</li>
-                <li><i class="bi bi-check-circle"></i> End-to-end development: planning, design, coding, and deployment.</li>
+                <li><i class="bi bi-check-circle"></i> End-to-end development: planning, design, coding, and deployment.
+                </li>
               </ul>
-              <p>Whether it's ERP systems, CRM platforms, or specialized applications, our solutions are designed to streamline operations and drive business success.</p>
+              <p>Whether it's ERP systems, CRM platforms, or specialized applications, our solutions are designed to
+                streamline operations and drive business success.</p>
+
+              <h3 class="text-primary">We can Develop Mobile App for your Business</h3>
+
+              <h4 class="text-black">Android App Development</h4>
+              <p>We create Android applications leveraging external technologies like C, C++, 2D & 3D graphics,
+                GPS-enabled services, and game engine support.</p>
+
+              <!-- iOS App Development -->
+              <h4 class="text-black">iOS App Development</h4>
+              <p>We develop innovative iOS applications (iPhone & iPad) to help businesses increase their revenue at an
+                affordable cost.</p>
+
+              <!-- Flutter App Development -->
+              <h4 class="text-black">Flutter App Development</h4>
+              <p>Flutter is the future of cross-platform development, backed by Google, providing a fast and efficient
+                development environment.</p>
+
+              <!-- Hybrid App Development -->
+              <h4 class="text-black">Hybrid App Development</h4>
+              <p>Hybrid frameworks provide a strong alternative to native development, offering faster time-to-market
+                for iOS & Android applications.</p>
+
+              <!-- Ionic App Development -->
+              <h4 class="text-black">Ionic App Development</h4>
+              <p>Ionic is an open-source framework for hybrid mobile apps, combining Cordova, AngularJS, and a robust UI
+                framework.</p>
+
+              <!-- React Native App Development -->
+              <h4 class="text-black">React Native App Development</h4>
+              <p>React Native, developed by Facebook, enables building native apps using JavaScript while ensuring a
+                real native user experience.</p>
+
+              <h3 class="text-primary mb-3">Most Comment Question?</h3>
+
+              <div class="accordion" id="faqAccordion faq__item">
+
+                <!-- Question 1 -->
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faq1">
+                      Where should I incorporate my business?
+                    </button>
+                  </h2>
+                  <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      The best place to incorporate your business depends on factors like taxation, legal regulations,
+                      and operational convenience. Common choices include your home country, Delaware (USA) for
+                      business-friendly laws, and offshore jurisdictions like Singapore.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faq2">
+                      What happens to my free trial?
+                    </button>
+                  </h2>
+                  <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      If you do not subscribe after the free trial, your access may be restricted or canceled. If you
+                      subscribe, you can continue using the service without interruption. Some services retain your data
+                      for a limited time, allowing you to reactivate later.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faq3">
+                      What is included in your services?
+                    </button>
+                  </h2>
+                  <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      Our services include website development, e-commerce solutions, SEO & digital marketing, and web
+                      hosting & maintenance. For a detailed list, visit our services page or contact us.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="accordion-item" data-aos="fade-up" data-aos-delay="400">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                      data-bs-target="#faq4">
+                      What type of company is measured?
+                    </button>
+                  </h2>
+                  <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                      Companies are measured by revenue, industry, market value, and employee size. Small, medium, and
+                      large enterprises are categorized based on these factors.
+                    </div>
+                  </div>
+                </div>
+
+              </div>
             </div>
 
             <!-- Graphic Design & Video Solutions -->
             <div id="graphic-video-dev" class="service-content">
-              <img src="assets/img/services.jpg" alt="Graphic Design & Video Solutions" class="img-fluid services-img mb-4">
-              <h3 class="text-primary">We craft compelling graphic designs and engaging videos that enhance your brand’s visual identity and deliver your message effectively.</h3>
-              <p>Enhance your brand’s identity with our creative graphic design and video production services. We create stunning visuals, engaging marketing videos, and dynamic animations that capture attention and communicate your message effectively. From logos and brochures to explainer videos and social media content, we help your brand stand out.</p>
+              <img src="assets/img/services.jpg" alt="Graphic Design & Video Solutions"
+                class="img-fluid services-img mb-4">
+              <h3 class="text-primary">We craft compelling graphic designs and engaging videos that enhance your brand’s
+                visual identity and deliver your message effectively.</h3>
+              <p>Enhance your brand’s identity with our creative graphic design and video production services. We create
+                stunning visuals, engaging marketing videos, and dynamic animations that capture attention and
+                communicate your message effectively. From logos and brochures to explainer videos and social media
+                content, we help your brand stand out.</p>
               <ul>
                 <li><i class="bi bi-check-circle"></i> Creative logos, brochures, banners, and marketing materials.</li>
                 <li><i class="bi bi-check-circle"></i> Promotional videos, explainer videos, and animations.</li>
-                <li><i class="bi bi-check-circle"></i> Designs and visuals tailored for social media and web platforms.</li>
+                <li><i class="bi bi-check-circle"></i> Designs and visuals tailored for social media and web platforms.
+                </li>
               </ul>
-              <p>From concept to production, we bring your ideas to life through impactful visuals and professional-grade videos that resonate with your target audience.</p>
+              <p>From concept to production, we bring your ideas to life through impactful visuals and
+                professional-grade videos that resonate with your target audience.</p>
             </div>
 
           </div>
