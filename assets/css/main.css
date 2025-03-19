@@ -757,6 +757,10 @@ span {
   font-weight: 600;
 }
 
+.footer .link-animated .active {
+  padding-left: 12px;
+}
+
 .footer .link-animated a:hover {
   padding-left: 12px;
 }
