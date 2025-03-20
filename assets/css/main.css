@@ -1908,6 +1908,10 @@ section,
 /*--------------------------------------------------------------
 # Projects Section
 --------------------------------------------------------------*/
+
+.projects .isotope-layout{
+  margin-top: 30px;
+}
 .projects .portfolio-filters {
   padding: 0;
   margin: 0 auto 20px auto;
@@ -1919,17 +1923,21 @@ section,
   cursor: pointer;
   display: inline-block;
   padding: 0;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
-  margin: 0 10px;
+  margin: 0 7px;
   line-height: 1;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
+  padding: 10px 20px;
+  border: 2px solid var(--accent-color);
+  border-radius: 30px;
 }
 
 .projects .portfolio-filters li:hover,
 .projects .portfolio-filters li.filter-active {
-  color: var(--accent-color);
+  color: var(--background-color);
+  background-color: var(--accent-color);
 }
 
 .projects .portfolio-filters li:first-child {
@@ -1950,10 +1958,15 @@ section,
 .projects .portfolio-content {
   position: relative;
   overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0px 0 25px rgba(0, 0, 0, 0.1);
 }
 
 .projects .portfolio-content img {
   transition: 0.3s;
+  width: 100%;
+  height: 220px;
+  max-height: 220px;
 }
 
 .projects .portfolio-content .portfolio-info {
@@ -2015,6 +2028,14 @@ section,
 
 .projects .portfolio-content:hover img {
   transform: scale(1.1);
+}
+
+.projects .details {
+  background: color-mix(in srgb, var(--surface-color), transparent 5%);
+  padding: 15px;
+  transition: all ease-in-out 0.3s;
+  position: relative;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
@@ -2915,11 +2936,36 @@ section,
   content: "";
   position: absolute;
   display: block;
-  width: 50px;
+  width: 250px;
   height: 3px;
   background: var(--accent-color);
   left: 0;
   bottom: 0;
+}
+
+.portfolio-info .item {
+  display: inline-block;
+  margin: 5px;
+}
+
+.portfolio-info .tech_circle {
+  border-radius: 50%;
+  background-color: #fff;
+  padding-top: 10px;
+  width: 70px;
+  height: 70px;
+  text-align: center !important;
+  box-shadow: 0px 0 25px rgba(0, 0, 0, 0.1);
+}
+.tech_circle img {
+  width: 50px !important;
+  height: 50px !important;
+  display: inline !important;
+}
+
+.tech_circle .title {
+  font-weight: 700;
+  margin-top: 4px;
 }
 
 .project-details .portfolio-info ul {
