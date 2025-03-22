@@ -403,7 +403,7 @@ span {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-color);
-    font-size: 15px;
+    font-size: 17px;
     padding: 0 2px;
     font-family: var(--nav-font);
     font-weight: 600;
@@ -447,6 +447,11 @@ span {
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
+  }
+
+  .navmenu  ul a i {
+    font-size: 15px;
+    margin-right: 2px;
   }
 
   .navmenu .dropdown ul {
@@ -607,6 +612,10 @@ span {
     background-color: var(--accent-color);
     color: var(--contrast-color);
     transform: rotate(180deg);
+  }
+
+  .navmenu  ul a i {
+    display: none;
   }
 
   .navmenu .dropdown ul {
