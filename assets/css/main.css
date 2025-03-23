@@ -1606,8 +1606,8 @@ section,
 
 .about-two__left-item .shape-halper {
   position: absolute;
-  top: 26%;
-  right: 17%;
+  bottom: 3%;
+  left: -115px;
 }
 
 .sway__animation {
@@ -1616,13 +1616,33 @@ section,
 
 .about__left-item .big-image,
 .about-two__left-item .big-image {
-  max-width: 386px;
+  max-width: 430px;
   position: relative;
   z-index: 1;
 }
 
 .image img {
   width: 100%;
+}
+
+.about__left-item .up-image1,
+.about-two__left-item .up-image1{
+  max-width: 300px;
+  position: absolute;
+  right: 15px;
+  top: 5px;
+  z-index: 2;
+  border: 10px solid #deddec;
+}
+
+.about__left-item .up-image2,
+.about-two__left-item .up-image2{
+  max-width: 300px;
+  position: absolute;
+  right: 15px;
+  top: 220px;
+  z-index: 2;
+  border: 10px solid #deddec;
 }
 
 .about-two__left-item .sm-image {
@@ -1635,9 +1655,9 @@ section,
   max-width: 300px;
   position: absolute;
   right: 15px;
-  bottom: 7px;
+  bottom: 5px;
   z-index: 2;
-  border: 10px solid white;
+  border: 10px solid #deddec;
 }
 
 .about-two__left-item .circle-shape {
