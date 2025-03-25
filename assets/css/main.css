@@ -1130,7 +1130,8 @@ section,
   color: var(--contrast-color);
 }
 
-.hero_explore_btn:hover .hero_watch_btn:hover {
+.hero_explore_btn:hover,
+.hero_watch_btn:hover {
   background: var(--accent-color);
   color: var(--contrast-color);
 }
@@ -3735,9 +3736,15 @@ section,
   justify-content: center;
   align-items: center;
   border-radius: 4px;
+  cursor: pointer;
   transition: all 0.3s ease-in-out;
   border-radius: 50%;
   border: 2px dotted color-mix(in srgb, var(--accent-color), transparent 40%);
+}
+
+.contact .info-item i:hover {
+  background: var(--accent-color);
+  color: var(--background-color);
 }
 
 .contact .info-item h3 {
