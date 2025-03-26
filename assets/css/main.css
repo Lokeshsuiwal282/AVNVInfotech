@@ -1559,7 +1559,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# About Section
+# About1 Section
 --------------------------------------------------------------*/
 .about__shape-left {
   position: absolute;
@@ -1673,6 +1673,14 @@ section,
   position: absolute;
   top: 30px;
   right: 80px;
+}
+
+.about .our-story ul li {
+  display: flex;
+}
+
+.about .our-story ul li i {
+  margin-right: 8px;
 }
 
 /* Continuous 360° Rotation */
