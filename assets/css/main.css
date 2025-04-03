@@ -218,13 +218,20 @@ h6 {
 .header .logo img {
   max-height: 55px;
   margin-right: 8px;
-  /* animation: rotate360 80s linear infinite; */
 }
 
 .header .logo h1 {
   font-size: 24px;
   margin: 0;
   font-weight: 700;
+  color: var(--heading-color);
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+}
+
+.header .logo p {
+  font-size: 12px;
+  margin: 0;
   color: var(--heading-color);
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
@@ -255,9 +262,10 @@ h6 {
 }
 
 .about-three__left-item .about-call-icon {
-  width: 56px;
-  height: 56px;
-  line-height: 56px;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
   text-align: center;
   border-radius: 50%;
   transition: var(--transition);
@@ -265,9 +273,9 @@ h6 {
 }
 
 .about-three__left-item .about-call-icon span {
-  width: 48px;
-  height: 48px;
-  line-height: 50px;
+  width: 38px;
+  height: 38px;
+  line-height: 40px;
   text-align: center;
   border-radius: 50%;
   transition: var(--transition);
@@ -277,6 +285,11 @@ h6 {
 span {
   display: inline-block;
   color: var(--span);
+}
+
+.header .about-call-icon i {
+  font-size: 17px;
+  color: var(--contrast-color);
 }
 
 @keyframes rotateAnimation {
@@ -291,10 +304,6 @@ span {
   100% {
     transform: rotate(12deg);
   }
-}
-
-.about-three__left-item .about-call-icon svg {
-  animation: rotateAnimation 2.5s infinite ease-in-out;
 }
 
 /* Global Header on Scroll
@@ -340,12 +349,13 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .info .social-icon a {
   width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -569,7 +579,7 @@ span {
   .navmenu a,
   .navmenu a:focus {
     color: var(--nav-dropdown-color);
-    padding: 10px 20px;
+    padding: 8px 15px;
     font-family: var(--nav-font);
     font-size: 17px;
     font-weight: 500;
@@ -614,7 +624,7 @@ span {
     transform: rotate(180deg);
   }
 
-  .navmenu  ul a i {
+  .navmenu  ul .home-icons {
     display: none;
   }
 
@@ -806,8 +816,7 @@ span {
 }
 
 .footer .copyright {
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-bottom: 5px;
   border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
@@ -2076,200 +2085,6 @@ section,
   text-align: center;
 }
 
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
-
-.testimonials .testimonials-carousel,
-.testimonials .testimonials-slider {
-  overflow: hidden;
-}
-
-.testimonials .testimonial-wrap-img {
-  position: absolute;
-  width: 100%;
-}
-
-.testimonials .testimonial-item {
-  box-sizing: content-box;
-  padding: 50px;
-  min-height: 300px;
-  position: relative;
-}
-
-.testimonials .testimonial-item .testimonial-icon{
-  float: right;
-}
-
-.testimonials .testimonial-item .testimonial-img {
-  width: 95px;
-  height: 105px;
-  border-radius: 10px;
-  border: 3px solid var(--background-color);
-  position: absolute;
-  background-color: #25d366;
-  padding: 5px;
-}
-
-.testimonials .testimonial-item .testimonial-info {
-  margin: 45px 110px 0;
-}
-
-.testimonials .testimonial-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
-  color: #ffc107;
-}
-
-.testimonials .testimonial-item h4 {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 15px;
-  margin: 0;
-  color: var(--default-color);
-  font-weight: 600;
-}
-
-.testimonials .testimonial-item .stars {
-  margin: 10px 0;
-}
-
-.testimonials .testimonial-item .stars i {
-  color: #ffc107;
-  margin: 0 1px;
-}
-
-.testimonials .testimonial-item .quote-icon-left,
-.testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--accent-color), transparent 60%);
-  font-size: 50px;
-  line-height: 0;
-}
-
-.testimonials .testimonial-item .quote-icon-right {
-  transform: scale(-1, -1);
-}
-
-.testimonials .testimonial-item p {
-  font-style: italic;
-  color: var(--background-color);
-  font-size: 17px;
-}
-
-.testimonials .swiper-wrapper {
-  height: auto;
-}
-
-.testimonials .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: var(--background-color);
-  opacity: 1;
-  border: 1px solid var(--accent-color);
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
- /* RESPONSIVE DESIGN */
-
-@media (max-width: 1396px) {
-  .testimonials .testimonial-item {
-    padding: 40px;
-    min-height: 320px;
-  }
-  .testimonials .testimonial-item .testimonial-img {
-    margin-top: -10px;
-  }
-
-  .testimonials .testimonial-item .testimonial-info {
-    margin: 35px 110px 0;
-  }
-}
-@media (max-width: 1196px) {
-  .testimonials .testimonial-wrap-img {
-    width: 100%;
-    height: 425px !important;
-  }
-  .testimonials .testimonial-item .testimonial-img {
-    margin-top: -25px;
-  }
-  .testimonials .testimonial-item {
-    padding: 55px 110px;
-  }
-  .testimonials .testimonial-item .testimonial-info {
-    margin: 25px 101px 0;
-  }
-}
-
-@media (max-width: 996px) {
-  .testimonials .testimonial-wrap-img {
-    width: 100%;
-    height: 425px !important;
-  }
-  .testimonials .testimonial-item .testimonial-img {
-    margin-top: -25px;
-  }
-  .testimonials .testimonial-item {
-    padding: 55px 60px;
-  }
-  .testimonials .testimonial-item .testimonial-info {
-    margin: 25px 101px 0;
-  }
-}
-
-@media (max-width: 767px) {
-  .testimonials .testimonial-wrap {
-    padding-left: 0;
-  }
-
-  .testimonials .testimonials-carousel,
-  .testimonials .testimonials-slider {
-    overflow: hidden;
-  }
-
-  .testimonials .testimonial-item {
-    padding: 40px;
-  }
-
-  .testimonials .testimonial-item .testimonial-info {
-    margin: 40px 101px 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .testimonials .testimonial-item {
-    padding: 30px 15px;
-  }
-  .testimonials .testimonial-item .testimonial-img {
-    margin-top: 0px;
-  }
-
-  .testimonials .testimonial-item .testimonial-info {
-    margin: 50px 101px 0;
-  }
-}
-
-@media (max-width: 396px) {
-  .testimonials .testimonial-item {
-    padding: 25px 10px;
-  }
-  .testimonials .testimonial-item .testimonial-img {
-    margin-top: 0px;
-  }
-
-  .testimonials .testimonial-item .testimonial-info {
-    margin: 40px 101px -10px;
-  }
-  .testimonials .testimonial-item p {
-    font-size: 15px;
-  }
-}
 
 /*--------------------------------------------------------------
 # Recent Blog Posts Section
@@ -3641,8 +3456,8 @@ section,
 }
 
 .faq .faq-image img {
-  max-width: 500px;
-  max-height: 500px;
+  max-width: 430px;
+  max-height: 430px;
 }
 
 .accordion .accordion-item {
